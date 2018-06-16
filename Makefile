@@ -2,7 +2,7 @@ build:
 	docker-compose build
 .PHONY: build
 
-push:
+push: build
 	docker-compose push
 .PHONY: push
 
