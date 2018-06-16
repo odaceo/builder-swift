@@ -11,5 +11,5 @@ ARG SWIFT_VERSION
 ENV SWIFTENV_ROOT /root/.swiftenv
 ENV PATH ${SWIFTENV_ROOT}/shims:${SWIFTENV_ROOT}/bin:${PATH}
 
-ADD scripts/*.sh /root/
+COPY scripts/swift.sh /root/
 RUN set -eux; /root/swift.sh
