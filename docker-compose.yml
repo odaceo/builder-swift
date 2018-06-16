@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+
+  4.1-ubuntu16:
+    build:
+      context: ./ubuntu-16
+      dockerfile: ../Dockerfile
+      args:
+        SWIFT_VERSION: 4.1.2
+        BUILDER_VERSION: ubuntu16
+    image: odaceo/swift:4.1-ubuntu16
