@@ -1,6 +1,11 @@
+sudo: required
+
 language: bash
 services: docker
 
+before_install:
+  - sudo apt update -y
+  - sudo apt install --only-upgrade docker-ce -y
 script:
   - docker --version
   - docker-compose --version
