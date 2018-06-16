@@ -1,4 +1,3 @@
-
 ARG BUILDER_VERSION
 
 FROM odaceo/builder:${BUILDER_VERSION}
