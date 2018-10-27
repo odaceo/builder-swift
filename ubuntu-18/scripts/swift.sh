@@ -11,23 +11,17 @@ apt-get update
 # Install CLang, LLDB & dependencies
 apt-get install -y \
     make \
-    libc6-dev \
-    clang-3.8 \
-    libedit-dev \
-    libpython2.7 \
+    clang \
     libicu-dev \
-    libssl-dev \
-    libxml2 \
-    libcurl4-openssl-dev \
-    pkg-config \
+    libcurl4 \
     lsb-release
 
 # Remove the local package index
 rm -rf /var/lib/apt/lists/*
 
 # Create symblic links
-update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-3.8 100
-update-alternatives --install /usr/bin/clang clang /usr/bin/clang-3.8 100
+update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-6.0 100
+update-alternatives --install /usr/bin/clang clang /usr/bin/clang-6-0 100
 
 # Clone swiftenv
 git clone https://github.com/kylef/swiftenv.git ~/.swiftenv

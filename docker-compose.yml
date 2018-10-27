@@ -2,11 +2,11 @@ version: '3'
 
 services:
 
-  4.1-ubuntu16:
+  4.2-ubuntu18:
     build:
-      context: ./ubuntu-16
+      context: ./ubuntu-18
       dockerfile: ../Dockerfile
       args:
-        BUILDER_VERSION: ubuntu16
-        SWIFT_VERSION: '4.1.2'
-    image: odaceo/swift:4.1-ubuntu16
+        BUILDER_VERSION: ubuntu18
+        SWIFT_VERSION: '4.2'
+    image: odaceo/swift:4.2-ubuntu18
