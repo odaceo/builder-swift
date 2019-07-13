@@ -6,8 +6,5 @@ LABEL maintainer="Alexandre GARINO <alexandre.garino@odaceo.ch>"
 
 ARG SWIFT_VERSION
 
-ENV SWIFTENV_ROOT /root/.swiftenv
-ENV PATH ${SWIFTENV_ROOT}/shims:${SWIFTENV_ROOT}/bin:${PATH}
-
 COPY scripts/swift.sh /root/
 RUN set -eux; /root/swift.sh
