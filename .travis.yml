@@ -7,10 +7,6 @@ addons:
   apt:
     packages:
       - docker-ce
-      
-before_install:
-  - docker --version
-  - docker-compose --version
 
 script:
   - make build
