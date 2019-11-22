@@ -3,11 +3,14 @@ sudo: required
 language: bash
 services: docker
 
+addons:
+  apt:
+    packages:
+      - docker-ce
+      
 before_install:
-  - sudo apt update -y
-  - sudo apt install realpath python python-pip -y
-  - sudo apt install --only-upgrade docker-ce -y
-  - sudo pip install docker-compose || true
+  - docker --version
+  - docker-compose --version
 
 script:
   - make build
